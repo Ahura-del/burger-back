@@ -1,0 +1,22 @@
+﻿@* <button onclick="btnpost()">POST</button>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    function btnpost() {
+        var serializedData = JSON.stringify({ email: "a@a.com", username: "test", phonenumber: "", address: "", profilepicture: "" });
+        $.ajax({
+            url: "Api/User",
+            cache: false,
+            type: "Post",
+            dataType: "Json",
+            contentType: "application/json",
+            data: serializedData,
+            success: function (response) {
+
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        });
+    }
+</script> *@
